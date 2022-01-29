@@ -1,0 +1,65 @@
+on_game_start = {
+	events = {
+		
+	}
+}
+
+on_game_start_country = {
+	events = {
+		m_gate_builders.1
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		m_gate_builders.100
+	}
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+		m_gate_builders.2
+	}
+}
+
+# A Megastructure has been upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+on_megastructure_upgraded = {
+	events = {
+		m_gate_builders.4
+	}
+}
+
+# A planet has begun the colonization process.
+# Scope = Planet
+on_colonization_started = {
+	events = {
+		m_gate_builders.5
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		m_gate_builders.3
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		m_gate_builders.110
+	}
+}

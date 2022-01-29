@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_gate_builders"
+		texturefile = "gfx/event_pictures/origins/origin_gate_builders.dds"
+		alwaystransparent = yes
+	}
+}

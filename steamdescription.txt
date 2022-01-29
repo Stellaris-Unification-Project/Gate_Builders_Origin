@@ -1,0 +1,31 @@
+Inspired by the Vaulters of Endless Space 2, this origin mod starts the player with one science ship, one reusable colony ship, and the ability to build cheaper gateways right from the start. All other ships however travel through FTL at a very slow speed, making you dependent on those gateways for fast travel. The mod aims to offer an alternative early game colonization experience, and a different way to tackle military expansion and defense well into the later game.
+
+"A decade ago, archeologists discovered three pieces of precursor technology buried underground on our homeworld. One was a dormant gateway. The other two were crashed spaceships which however still had a functional FTL drive. While our scientists were able to reverse-engineer the secrets of gateway technology, they could not figure out how to replicate FTL drives. Despite this, our unified government has devised a plan to allow interstellar colonization: the FTL ships have been retrofitted into a huge science ship and a colonization ship, christened respectively the Odyssey and the Colossy. The Odyssey will explore the galaxy for habitable planets. When found, the Colossy will establish a colony on that world. The colony will then construct a gateway, connecting the system to our burgeoning interstellar empire."
+
+That's the intro blurb. The mod is quite heavy in new mechanics, so I'll take the time to explain everything here in a bit more detail.
+
+You start the game with one colony ship and one science ship which can travel through FTL at normal speed. All other ships take 3000 days to travel to another system. This makes you mostly reliant on the Colossy and Odyssey for expansion.
+
+The Colossy can colonize habitable worlds without even owning the system. You don't even need to survey the entire system - only the habitable planet must be surveyed. That's what the Odyssey is for. When you settle on a planet, the whole system will be automatically surveyed, revealing its resources. No anomalies will be revealed however. So if you want those and have the time, let the Odyssey survey the whole system first after all.
+
+When starting to colonize the planet, the Colossy disappears, and you will receive a constuction ship in the system. This one should be used to start construction of a gateway. You start the game with a 100% reduction in the cost of megastructures. Every megastructure you build however, increases the cost by 5%, until eventually you plateau at the standard cost. Colonies without a gateway in their system will get a 100% reduction in trade value, extra crime, stability loss, and an increased pop sprawl. Just to make sure you get the message. ;-) When the colonization process finishes, you will get back your Colossy (but only the first time you build a colony in that system!). Hopefully by then the Odyssey will have surveyed another promising planet, and you can repeat the process.
+
+Another phase of the game begins when you research Hyper Drive II. It offers two things.
+The first is a starbase building: the Hyperspace Beacon. In systems with that building, the Hyper Jump Charge Time is reset to default. This allows easier travel and expansion to the systems neighboring your starbases. If you have a string of systems all containing a starbase with hyperspace beacon, you can also create a highway of sorts for your ships.
+Alas, the game offers no way to change the hyper jump charge time of ships travelling TO a system with a hyperspace beacon. That's why I added a second item to the "Hyperlane Breach Points" tech: a Hyperfolding drive. It is a drive with limited jump capability. It has only half the range of a normal jump drive, and it can only jump to systems containing or neighboring a hyperspace beacon.
+
+Given the importance of starbases, and given that you are likely to get less starbase cap from the number of owned systems, keep in mind that you can get up to 7 extra starbases with the "Fortify the Borders" edict and the "Grasp the Void" ascension perk.
+
+Your mobility increases once again after you Hyper Drive III (Hyperspace Slipstreams). With that tech, you can jump to systems that have either the Colossy or Odyssey in them. Once again inspired by the Argosy of Endless Space 2. Finally, when you research jump drives or psi jump drives, all limitations on whereto you can jump, are removed.
+
+New addition: I added a titan aura, which reduces the hyperdrive windup time of the fleet from 3000 days to around 200. That makes it around equal of the cooldown time of a jump drive.
+
+This mod overwrites the following vanilla entries:
+HYPER_DRIVE_2/3 - to set the AI weight to zero for gate builders, so your science and construction ships automatically upgrade to the hyperfolding drive instead
+megastructures economy category - to change megastructure costs
+can_colonize_outside_borders game rule
+can_enter_system_by_jump game rule
+
+Released during version 2.7.*
+
+Have fun!

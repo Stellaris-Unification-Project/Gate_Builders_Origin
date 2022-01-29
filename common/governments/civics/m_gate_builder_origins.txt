@@ -1,0 +1,31 @@
+origin_gate_builders = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_gate_builders.dds"
+	picture = GFX_gate_builders
+	
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+
+#	possible = {
+#		is_ai = no
+#	}
+	
+	modifier = { 
+		#ship_base_speed_mult = -0.90
+		ship_windup_mult = 200
+		#country_starbase_influence_cost_mult = -0.5
+		ship_constructor_upkeep_mult = -1.0
+	}
+
+	description = origin_tooltip_gate_builders_effects
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

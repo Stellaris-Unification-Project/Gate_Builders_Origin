@@ -1,0 +1,503 @@
+namespace = m_gate_builders
+
+country_event = {
+	id = m_gate_builders.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { mt_is_gate_builder = yes }
+
+	immediate = {	
+		
+		give_technology = { tech = tech_gateway_activation message = no } 
+		give_technology = { tech = tech_gateway_construction message = no }
+		give_technology = { tech = tech_hyperfolding message = no }
+		add_modifier = { modifier = mgb_gateway_100 days = -1 }
+		
+		capital_scope = {
+			solar_system = {
+				spawn_megastructure = {
+					name = "Solar Gate"
+					type = "gateway_final"
+					random_pos = yes
+					orbit_angle = 360
+					init_effect = {
+						#set_megastructure_flag = doorstep_gateway@root
+						#save_event_target_as = doorstep_gateway
+					}
+				}
+			}
+		}
+		
+		create_fleet = {
+			name = "Colossy Expedition"
+			set_take_point = yes
+			effect = {
+				set_owner = prev
+				
+				create_ship = {
+					name = "Colossy"
+					random_existing_design = colossy
+				}				
+
+				#set_location = prev.capital_star
+				set_location = {
+					target = prev.capital_scope
+					distance = 5
+					angle = random
+				}
+				set_fleet_flag = colossy_fleet
+			}
+		}
+		
+#		create_fleet = {
+#			name = "Korinthy Fleet"
+#			set_take_point = yes
+#			effect = {
+#				set_owner = prev
+#				
+#				create_ship = {
+#					name = ""
+#					random_existing_design = korinthy
+#				}				
+#
+#				#set_location = prev.capital_star
+#				set_location = {
+#					target = prev.capital_scope
+#					distance = 5
+#					angle = random
+#				}
+#				set_fleet_flag = korinthy_fleet
+#			}
+#			settings = {
+#				#can_upgrade = no
+#				#can_change_composition = no
+#				#uses_naval_capacity = no
+#			}
+#		}
+		create_fleet = {
+			name = "Odyssey Expedition"
+			set_take_point = yes
+			effect = {
+				set_owner = prev
+
+				create_ship = {
+					name = "Odyssey"
+					random_existing_design = odyssey
+				}				
+
+				#set_location = prev.capital_star
+				set_location = {
+					target = prev.capital_scope
+					distance = 5
+					angle = random
+				}
+				set_fleet_flag = odyssey_fleet
+			}
+			settings = {
+				#can_upgrade = no
+				#can_change_composition = no
+				#uses_naval_capacity = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = m_gate_builders.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { mt_is_gate_builder = yes }
+
+	immediate = {	
+		if = 
+		{
+			limit = { has_modifier = mgb_gateway_100 }
+			remove_modifier = mgb_gateway_100
+			add_modifier = { modifier = mgb_gateway_95 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_95 }
+			remove_modifier = mgb_gateway_95
+			add_modifier = { modifier = mgb_gateway_90 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_90 }
+			remove_modifier = mgb_gateway_90
+			add_modifier = { modifier = mgb_gateway_85 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_85 }
+			remove_modifier = mgb_gateway_85
+			add_modifier = { modifier = mgb_gateway_80 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_80 }
+			remove_modifier = mgb_gateway_80
+			add_modifier = { modifier = mgb_gateway_75 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_75 }
+			remove_modifier = mgb_gateway_75
+			add_modifier = { modifier = mgb_gateway_70 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_70 }
+			remove_modifier = mgb_gateway_70
+			add_modifier = { modifier = mgb_gateway_65 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_65 }
+			remove_modifier = mgb_gateway_65
+			add_modifier = { modifier = mgb_gateway_60 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_60 }
+			remove_modifier = mgb_gateway_60
+			add_modifier = { modifier = mgb_gateway_55 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_55 }
+			remove_modifier = mgb_gateway_55
+			add_modifier = { modifier = mgb_gateway_50 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_50 }
+			remove_modifier = mgb_gateway_50
+			add_modifier = { modifier = mgb_gateway_45 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_45 }
+			remove_modifier = mgb_gateway_45
+			add_modifier = { modifier = mgb_gateway_40 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_40 }
+			remove_modifier = mgb_gateway_40
+			add_modifier = { modifier = mgb_gateway_35 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_35 }
+			remove_modifier = mgb_gateway_35
+			add_modifier = { modifier = mgb_gateway_30 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_30 }
+			remove_modifier = mgb_gateway_30
+			add_modifier = { modifier = mgb_gateway_25 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_25 }
+			remove_modifier = mgb_gateway_25
+			add_modifier = { modifier = mgb_gateway_20 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_20 }
+			remove_modifier = mgb_gateway_20
+			add_modifier = { modifier = mgb_gateway_15 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_15 }
+			remove_modifier = mgb_gateway_15
+			add_modifier = { modifier = mgb_gateway_10 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_10 }
+			remove_modifier = mgb_gateway_10
+			add_modifier = { modifier = mgb_gateway_05 days = -1 }
+		}
+		else_if = 
+		{
+			limit = { has_modifier = mgb_gateway_05 }
+			remove_modifier = mgb_gateway_05
+		}
+	}
+}
+
+# Scope = Planet
+#On Colonization Finished
+planet_event = {
+	id = m_gate_builders.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		owner = { mt_is_gate_builder = yes }
+		solar_system = { NOT = { has_megastructure = gateway_final } }
+		solar_system = { NOT = { has_star_flag = mgb_colossy_passed } }
+	}
+
+	immediate = {
+		if = 
+		{
+			limit = { 
+				owner = { is_gestalt = yes }
+				NOT = { has_modifier = mgb_isolated_gestalt }
+			}			
+			add_modifier = { modifier = mgb_isolated_gestalt days = -1 }
+		}
+		else_if = 
+		{
+			limit = { 
+				owner = { is_gestalt = no }
+				NOT = { has_modifier = mgb_isolated }
+			}
+			add_modifier = { modifier = mgb_isolated days = -1 }
+		}
+		
+		create_fleet = {
+			name = "Colossy Expedition"
+			set_take_point = yes
+			effect = {
+				set_owner = root.owner
+				
+				create_ship = {
+					name = "Colossy"
+					random_existing_design = colossy
+				}				
+
+				#set_location = prev.capital_star
+				set_location = {
+					target = root
+					distance = 5
+					angle = random
+				}
+				set_fleet_flag = colossy_fleet
+			}
+		}
+		solar_system = { set_star_flag = mgb_colossy_passed }
+	}
+}
+
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+country_event = {
+	id = m_gate_builders.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		mt_is_gate_builder = yes
+		from = { 
+			OR = 
+			{
+				is_megastructure_type = gateway_final
+				is_megastructure_type = gateway_restored
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_planet = 
+		{
+			limit = 
+			{
+				solar_system = { has_megastructure = gateway_final }
+				has_modifier = mgb_isolated
+			}
+			remove_modifier = mgb_isolated
+		}
+		every_owned_planet = 
+		{
+			limit = 
+			{
+				solar_system = { has_megastructure = gateway_final }
+				has_modifier = mgb_isolated_gestalt
+			}
+			remove_modifier = mgb_isolated_gestalt
+		}
+		every_owned_planet = 
+		{
+			limit = 
+			{
+				solar_system = { has_megastructure = gateway_restored }
+				has_modifier = mgb_isolated
+			}
+			remove_modifier = mgb_isolated
+		}
+		every_owned_planet = 
+		{
+			limit = 
+			{
+				solar_system = { has_megastructure = gateway_restored }
+				has_modifier = mgb_isolated_gestalt
+			}
+			remove_modifier = mgb_isolated_gestalt
+		}
+	}
+}
+
+# Scope = Planet
+#On Colonization started
+planet_event = {
+	id = m_gate_builders.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		owner = { mt_is_gate_builder = yes }
+		solar_system = { NOT = { has_megastructure = gateway_final } }
+		solar_system = { NOT = { has_megastructure = gateway_restored } }
+	}
+
+	immediate = {
+		create_fleet = {
+			name = "Gate Builder Crew"
+			#set_take_point = yes
+			effect = {
+				set_owner = root.owner
+				
+				create_ship = {
+					name = random # "Gate Builder"
+					random_existing_design = constructor
+				}				
+
+				set_fleet_stance = evasive
+				#set_location = prev.capital_star
+				set_location = {
+					target = root
+					distance = 5
+					angle = random
+				}
+				set_fleet_flag = gate_builder_fleet
+			}
+		}
+		
+		solar_system = {
+			if = {
+				limit = { exists = starbase }
+				starbase = { set_owner = root.owner }
+			}
+			else = {
+				create_starbase = {
+					size = starbase_outpost
+					owner = root.owner
+				}
+			}
+		}
+	}
+}
+
+# Root = Country
+#Yearly check
+country_event = {
+	id = m_gate_builders.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		mt_is_gate_builder = yes
+	}
+
+	immediate = {
+		every_owned_planet = 
+		{
+			if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						solar_system = { has_megastructure = gateway_final }
+						solar_system = { has_megastructure = gateway_restored }
+					}
+					has_modifier = mgb_isolated
+				}
+				remove_modifier = mgb_isolated
+			}
+			if = 
+			{
+				limit = 
+				{
+					OR = 
+					{
+						solar_system = { has_megastructure = gateway_final }
+						solar_system = { has_megastructure = gateway_restored }
+					}
+					has_modifier = mgb_isolated_gestalt
+				}
+				remove_modifier = mgb_isolated_gestalt
+			}
+			if = 
+			{
+				limit = 
+				{
+					NOR = 
+					{
+						solar_system = { has_megastructure = gateway_final }
+						solar_system = { has_megastructure = gateway_restored }
+					}
+					NOT = { has_modifier = mgb_isolated }
+					owner = { is_gestalt = no }
+				}
+				add_modifier = { modifier = mgb_isolated days = -1 }
+			}
+			if = 
+			{
+				limit = 
+				{
+					NOR = 
+					{
+						solar_system = { has_megastructure = gateway_final }
+						solar_system = { has_megastructure = gateway_restored }
+					}
+					NOT = { has_modifier = mgb_isolated_gestalt }
+					owner = { is_gestalt = yes }
+				}
+				add_modifier = { modifier = mgb_isolated_gestalt days = -1 }
+			}
+		}
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+# on_planet_transfer = {
+planet_event = {
+	id = m_gate_builders.110
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		owner = { mt_is_gate_builder = yes }
+		NOR = 
+		{
+			solar_system = { has_megastructure = gateway_final }
+			solar_system = { has_megastructure = gateway_restored }
+		}
+	}
+
+	immediate = {
+		if = 
+		{
+			limit = { owner = { is_gestalt = yes } }
+			add_modifier = { modifier = mgb_isolated_gestalt days = -1 }
+		}
+		else = 
+		{
+			add_modifier = { modifier = mgb_isolated days = -1 }
+		}
+	}
+}

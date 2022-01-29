@@ -1,0 +1,57 @@
+#Root = country
+#This = planet
+can_colonize_outside_borders = {
+	root = { mt_is_gate_builder = yes }
+	solar_system = { NOT = { exists = owner } }
+}
+
+# THIS = Fleet
+#can_jump_drive = {
+#	always = yes	# Moved cooldown to code
+#	OR = 
+#	{
+#		always = yes	# Moved cooldown to code
+		#has_component
+		#owner = { has_technology = tech_jump_drive_1 }
+		#owner = { has_technology = tech_psi_jump_drive_1 }
+#	}
+#}
+
+# Root = country attempting to target system for movement
+# This = system being targeted
+can_enter_system_by_jump = {
+	custom_tooltip = {
+		success_text = "debug: can jump"
+		fail_text = cannot_jump_to_system
+
+		# Sealed system
+		OR = {
+			NOT = { has_star_flag = sealed_system }
+			AND = {
+				root = { has_country_flag = entered_sealed_system }
+				has_star_flag = sealed_system
+			}
+		}
+
+		# L-Cluster
+		NOT = { has_star_flag = lcluster }
+		
+		OR = 
+		{
+			root = { mt_is_gate_builder = no }
+			root = { has_technology = tech_jump_drive_1 }
+			root = { has_technology = tech_psi_jump_drive_1 }
+			starbase = { has_starbase_building = hyperspace_beacon }
+			any_neighbor_system = { ignore_hyperlanes = yes starbase = { has_starbase_building = hyperspace_beacon } }
+			AND = 
+			{
+				root = { has_technology = tech_hyper_drive_3 }
+				OR = 
+				{
+					any_ship_in_system = { is_ship_size = colossy }
+					any_ship_in_system = { is_ship_size = odyssey }
+				}
+			}
+		}
+	}
+}

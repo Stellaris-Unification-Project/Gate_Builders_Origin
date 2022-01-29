@@ -1,0 +1,4 @@
+mt_is_gate_builder = 
+{
+	has_origin = origin_gate_builders
+}

@@ -1,0 +1,41 @@
+hyperspace_beacon = {
+	icon = "GFX_spaceport_module_atmospheric_manipulator"
+	construction_days = 180
+
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_hyper_drive_2 }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	station_modifier = {
+		starbase_trade_collection_range_add = 1
+	}
+
+	show_in_tech = "tech_hyper_drive_2"
+	
+	equipped_component = "STARBASE_AURA_HYPERSPACE_BEACON"
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 10
+	}
+}

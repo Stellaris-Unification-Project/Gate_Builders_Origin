@@ -1,0 +1,18 @@
+tech_hyperfolding = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { particles }
+	prerequisites = { "tech_basic_science_lab_1" }
+	is_rare = yes
+	
+	is_reverse_engineerable = no
+	start_tech = yes
+	potential = {
+		has_origin = origin_gate_builders
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}	

@@ -1,0 +1,209 @@
+@starbase_power_1 = 1100
+@starbase_power_2 = 1450
+@starbase_power_3 = 1900
+@starbase_power_4 = 2500
+@starbase_power_5 = 3200
+@starbase_power_6 = 4200
+
+@power0 = -5
+@power1 = -10
+@power2 = -15
+@power3 = -25
+
+@cost0 = 0
+@cost1 = 5
+@cost2 = 10
+@cost3 = 20
+
+@colossus_power_1 = -200
+@colossus_power_2 = -300
+@colossus_power_3 = -400
+@colossus_power_4 = -500
+@colossus_power_5 = -600
+
+@colossus_cost1 = 60
+@colossus_cost2 = 120
+@colossus_cost3 = 180
+@colossus_cost4 = 240
+@colossus_cost5 = 300
+
+utility_component_template = {
+	key = "ARK_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @starbase_power_6
+
+	#prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	#class_restriction = { shipclass_science_ship }
+	size_restriction = {
+		odyssey colossy
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_ARK"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = @power0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost0
+		}
+	}
+	ship_behavior = "colossus"
+
+	size_restriction = { odyssey colossy }
+	component_set = "combat_computers"
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "ARK_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @colossus_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @colossus_cost5
+			#sr_dark_matter = 32
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+	}
+
+	#prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { odyssey colossy }
+	
+	ai_weight = {
+		weight = 5
+
+#		modifier = {
+#			factor = 0.0
+#			is_country_type = default
+#			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+#		}
+	}
+}
+
+utility_component_template = {
+	key = "MGB_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost3
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.5
+		ship_ftl_jumpdrive_range_mult = -0.50
+	}
+	
+	ai_weight = {
+		weight = 3.5
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_science_ship shipclass_transport shipclass_colonizer shipclass_military_special }
+	prerequisites = { "tech_hyper_drive_2" "tech_hyperfolding" }
+	component_set = "ftl_components"
+	upgrades_to = "JUMP_DRIVE_1"
+}
+
+utility_component_template = {
+	key = "STARBASE_AURA_HYPERSPACE_BEACON"
+	size = medium
+	icon = "GFX_ship_part_aura_snare"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_starbase }
+
+	friendly_aura = {
+		name = "aura_starbase_hyperspace_beacon"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_warp_fluctuator_aura
+			priority = 10
+		}
+
+		modifier = {
+			#ship_ftl_jumpdrive_range_mult = 0.50
+			ship_windup_mult = -200
+			ship_winddown_mult = -200
+			ship_disengage_chance_mult = 0.20
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}
+
+#Defensive Titan aura
+utility_component_template = {
+	key = "SHIP_AURA_PORTAL"
+	size = medium
+	icon = "GFX_ship_part_aura_hyperlane"
+	icon_frame = 1
+	power = 0
+	
+	size_restriction = { titan }
+	component_set = "ship_aura_components"
+	
+	friendly_aura = {
+		name = "aura_inspiring_presence"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_inspiring_presence
+			priority = 30
+		}
+		
+		modifier = {
+			ship_fire_rate_mult = 0.05
+			ship_windup_mult = -186
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 20
+	}
+	
+	prerequisites = { "tech_hyper_drive_2" "tech_hyperfolding" }
+}

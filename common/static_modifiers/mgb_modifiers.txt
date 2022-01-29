@@ -1,0 +1,112 @@
+mgb_isolated =
+{
+	trade_value_mult = -1.0
+	pop_government_ethic_attraction = -1.0
+	species_empire_size_mult = 1.0
+}
+mgb_isolated_gestalt =
+{
+	planet_stability_add = -10
+	planet_crime_no_happiness_add = 100
+	species_empire_size_mult = 1.0
+}
+mgb_gateway_100 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -1.0
+}
+mgb_gateway_95 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.95
+}
+mgb_gateway_90 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.90
+}
+mgb_gateway_85 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.85
+}
+mgb_gateway_80 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.80
+}
+mgb_gateway_75 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.75
+}
+mgb_gateway_70 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.70
+}
+mgb_gateway_65 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.65
+}
+mgb_gateway_60 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.60
+}
+mgb_gateway_55 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.55
+}
+mgb_gateway_50 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.50
+}
+mgb_gateway_45 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.45
+}
+mgb_gateway_40 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.40
+}
+mgb_gateway_35 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.35
+}
+mgb_gateway_30 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.30
+}
+mgb_gateway_25 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.25
+}
+mgb_gateway_20 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.20
+}
+mgb_gateway_15 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.15
+}
+mgb_gateway_10 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.10
+}
+mgb_gateway_05 =
+{
+	megastructure_build_speed_mult = 0.0
+	megastructures_cost_mult = -0.05
+}

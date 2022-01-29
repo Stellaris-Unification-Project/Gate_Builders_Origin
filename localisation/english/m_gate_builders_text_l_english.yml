@@ -1,0 +1,37 @@
+﻿l_english:
+
+ origin_tooltip_gate_builders_effects:13 "Start with a §YGateway§! in your home system, and the technology to build more. Megastructures have a reduced cost, but each one you build increases the cost gradually back to normal. Starts with a colossus-sized science and construction ship which can travel at FTL at regular speed."
+ 
+ origin_gate_builders:0 "Gate Builders"
+ origin_gate_builders_desc:1 "Gate Builders."
+ 
+ START_SCREEN_GATE_BUILDERS:0 "A decade ago, archeologists discovered three pieces of precursor technology buried underground on our homeworld. One was a dormant gateway. The other two were crashed spaceships which however still had a functional FTL drive. While our scientists were able to reverse-engineer the secrets of gateway technology, they could not figure out how to replicate FTL drives. Despite this, our unified government has devised a plan to allow interstellar colonization: the FTL ships have been retrofitted into a huge science ship and a colonization ship, christened respectively the Odyssey and the Colossy. The Odyssey will explore the galaxy for habitable planets. When found, the Colossy will establish a colony on that world. The colony will then construct a gateway, connecting the system to our burgeoning interstellar empire."
+ 
+ NAME_Ark_Fleet:0 "Ark Fleet" 
+ 
+ colossy:0 "Seed Ship"
+ colossy_plural:0 "Seed Ships"
+ korinthy:0 "Korinthy"
+ korinthy_plural:0 "Korinthies"
+ odyssey:0 "Prospector"
+ odyssey_plural:0 "Prospectors"
+ 
+ SHIP_COLOSSY_SECTION:0 "Colossy"
+ SHIP_KORINTHY_SECTION:0 "Korinthy"
+ SHIP_ODYSSEY_SECTION:0 "Odyssey"
+ ARK_REACTOR:0 "Ark Reactor"
+ COMBAT_COMPUTER_ARK:0 "Ark Computer"
+ ARK_SHIP_THRUSTER_5:0 "Ark Thruster"
+ 
+ MGB_JUMP_DRIVE_1:0 "Hyperfolding Drive"
+ mgb_isolated:0 "Isolated"
+ mgb_isolated_gestalt:0 "Isolated"
+ mgb_isolated_desc:0 "Without a gateway to connect it to our homeworld, this colony will estrange from our empire and desire independence. This modifier will be removed at most one year after a gateway is constructed in this system."
+ mgb_isolated_gestalt_desc:0 "Without a gateway to connect it to our homeworld, this colony will estrange from our empire and desire independence. This modifier will be removed at most one year after a gateway is constructed in this system."
+ 
+ sm_hyperspace_beacon:0 "Hyperspace Beacon"
+ sm_hyperspace_beacon_desc:0 "Assists friendly ships in the system with FTL travel by identifying ideal conditions for entering the hyperlanes and optimizing projected travel routes.\n"
+ 
+ SHIP_AURA_PORTAL:0 "Enlarged Jump Bubble"
+ STARBASE_AURA_WARP_FLUCTUATOR:0 "$sm_hyperspace_beacon$"
+ aura_starbase_hyperspace_beacon:0 "$defensive_aura$ - $sm_hyperspace_beacon$"
